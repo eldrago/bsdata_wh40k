@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2de1-b2df-6d5a-a23c" name="Leagues of Votann" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="28ec-711c-d87f-3aeb" gameSystemRevision="220" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="2de1-b2df-6d5a-a23c" name="Leagues of Votann" revision="1" battleScribeVersion="2.03" library="false" gameSystemId="28ec-711c-d87f-3aeb" gameSystemRevision="223" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="9bad-66b2-0491-1d67" name="Squats Leak" shortName="Sqleak" publisher="Squats Leak"/>
   </publications>
@@ -630,6 +630,21 @@ Each time a model with this custom makes an attack against a target that has 0 J
                   </characteristics>
                 </profile>
               </profiles>
+              <entryLinks>
+                <entryLink id="4c13-8bff-a3bc-b801" name="Established League Customs (Ancestral Judgement)" hidden="false" collective="false" import="true" targetId="fba1-5831-a2ff-5db4" type="selectionEntryGroup"/>
+                <entryLink id="2404-b54d-1a65-f478" name="Established League Customs (First Pick)" hidden="false" collective="false" import="true" targetId="3ad8-2c95-358f-1baa" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fd9d-96d1-b1a2-ec79" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="235b-e9fa-d240-cd40" type="min"/>
+                  </constraints>
+                </entryLink>
+                <entryLink id="6efc-99db-dab3-bba8" name="Established League Customs" hidden="false" collective="false" import="true" targetId="78c4-903c-a811-2703" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c8de-6873-f5cc-95c0" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c616-1983-4a24-57a3" type="min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
                 <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
@@ -649,7 +664,12 @@ Each time a model with this custom makes an attack against a target that has 0 J
       <modifiers>
         <modifier type="add" field="category" value="28bb-a898-2488-8ea6">
           <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75cb-355f-a5c4-f883" type="equalTo"/>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="75cb-355f-a5c4-f883" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="937d-b7b1-0c87-82e4">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="231a-0089-9fb7-5680" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -894,7 +914,13 @@ Rampart Shield (Aura): While a friendly &lt;LEAGUE&gt; Infantry or &lt;LEAGUE&gt
       <modifiers>
         <modifier type="add" field="category" value="28bb-a898-2488-8ea6">
           <conditions>
-            <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99a7-9945-3f61-5c28" type="equalTo"/>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="99a7-9945-3f61-5c28" type="equalTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" field="category" value="72bc-19e5-1685-d2b9"/>
+        <modifier type="add" field="category" value="937d-b7b1-0c87-82e4">
+          <conditions>
+            <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-fbbd-bdb6-85c0" type="equalTo"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -946,11 +972,7 @@ Rampart Shield (Aura): While a friendly &lt;LEAGUE&gt; Infantry or &lt;LEAGUE&gt
           </constraints>
           <entryLinks>
             <entryLink id="99a7-9945-3f61-5c28" name="Teleport Crest" hidden="false" collective="false" import="true" targetId="47bb-f983-2fed-b0bb" type="selectionEntry"/>
-            <entryLink id="41c3-fbbd-bdb6-85c0" name="Weavefield crest (Champion)" hidden="false" collective="false" import="true" targetId="dae9-c0f4-48c0-ac9c" type="selectionEntry">
-              <modifiers>
-                <modifier type="add" field="category" value="937d-b7b1-0c87-82e4"/>
-              </modifiers>
-            </entryLink>
+            <entryLink id="41c3-fbbd-bdb6-85c0" name="Weavefield crest (Champion)" hidden="false" collective="false" import="true" targetId="dae9-c0f4-48c0-ac9c" type="selectionEntry"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup id="209d-4bcf-562c-b5d7" name="Melee Weapon Selection" hidden="false" collective="false" import="true" defaultSelectionEntryId="b244-faac-42d4-e344">
@@ -3436,7 +3458,7 @@ Add 1 to the bearer&apos;s Wounds chacteristic</characteristic>
             <characteristic name="Type" typeId="077c342f-d7b9-45c6-b8af-88e97cafd3a2">Melee</characteristic>
             <characteristic name="S" typeId="59b1-319e-ec13-d466">+2</characteristic>
             <characteristic name="AP" typeId="75aa-a838-b675-6484">-3</characteristic>
-            <characteristic name="D" typeId="ae8a-3137-d65b-4ca7">+2</characteristic>
+            <characteristic name="D" typeId="ae8a-3137-d65b-4ca7">2</characteristic>
             <characteristic name="Abilities" typeId="837d-5e63-aeb7-1410">Each time the bearer fights, it makes 3 additional attacks with this weapon.</characteristic>
           </characteristics>
         </profile>
@@ -3534,6 +3556,233 @@ Each time an attack made by this weapon hits a unit that has 1 or more Judgement
         <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry id="07fd-9e4d-3e9a-8f01" name="Honour in Toil" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6cd2-f178-57d6-00cb" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d174-daeb-2a13-6ac6" name="Honour in Toil" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time an attack is made by a  model with this custom, if the unit  is below its Starting Strength, add 1 to that attack&apos;s hit roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="5b5a-9a88-46b0-232d" name="Martial Cloneskeins" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2c2a-70d6-ea01-fc2c" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="e6e8-851c-27ec-cd41" name="Martial Cloneskeins" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a model with this custom makes a melee attack, if that mode&apos;ls unit made a charge move, was charged, or performed a Heroic Intervention this turn, add 1 to that attack&apos;s Strength characteristic.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="230b-98e8-e80f-5564" name="Refined Power Cores" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f119-d599-9d99-2885" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="8b90-51a0-a6ae-2c19" name="Refined Power Cores" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Add 2&quot; to the Move characteristic of models with this custom that have either the Accelerated or Vehicle keywords.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="88b4-00ba-c416-2ac9" name="Stoic" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc5f-aab2-d60e-88d1" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="5608-d859-6f2c-d7b1" name="Stoic" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">You can re-roll failed Morale tests taken for a unit with this custom.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="f8a8-8c59-c3b7-159f" name="Superior Beam Capacitors" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1f07-9452-4407-1405" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="1a97-67b1-e03d-5c6e" name="Superior Beam Capacitors" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Add 1 to the Strength characteristic of all beam weapons equiped by models with this custom (including Relics).
+
+Each time a unit with this custom is selected for the Core-Buster Fire Patern Stratagem, that Stratagem costs 0CP.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="1469-ebe2-b4c3-04ee" name="Void Hardened" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dab1-3ab1-2e2f-106e" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="d060-3e49-a222-0ca8" name="Void Hardened" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time an attack is made against a unit with this custom, an unmodified wound roll of 1-2 for that attack fails, irrespective of any abilities that the weapon or the model making the attack may have.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="fb3a-d08d-ce63-bb5e" name="Warrior Pride" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b6ba-1f9f-a13c-5678" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="9a1d-a1ba-6b3f-cb9d" name="Warrior Pride" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a unit with this Custom is selected to shoot or fight, you can re-roll one hit roll or one wound roll when resolving that unit&apos;s attacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="d556-7d38-045b-8c06" name="Weaponsmiths" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8efc-38e4-3991-ec37" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="7b5f-f2fa-cf45-be5e" name="Weaponsmiths" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Add 4&quot; tothe Range characteristic of all ranged weapons (excluding Relics) models with this custom are equipped with.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="0648-8c85-a315-c45e" name="War Songs" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7cba-d98b-b097-c52f" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="dd99-4ef7-73c1-b80b" name="War Songs" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a &lt;League&gt; model with this custom makes a melee attack, if the target of that melee attack was within Engagement Range of 2 ore more &lt;League&gt; Core units from your army when the attacking unit was selected to fight, you can re-roll the hit roll.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="254e-d3bd-2a57-f2b9" name="The Just Blade" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="8aa3-3586-d902-83e1" type="notEqualTo"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b244-faac-42d4-e344" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="7994-593b-7ff1-6f59" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aedc-acdf-216d-1a19" type="max"/>
+        <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fa3d-6042-d9c6-2830" type="max"/>
+      </constraints>
+      <profiles>
+        <profile id="0043-ad10-9328-f815" name="The Just Blade" hidden="false" typeId="d5f97c0b-9fc9-478d-aa34-a7c414d3ea48" typeName="Weapon">
+          <characteristics>
+            <characteristic name="Range" typeId="6fa97fa8-ea74-4a27-a0fb-bc4e5f367464">Melee</characteristic>
+            <characteristic name="Type" typeId="077c342f-d7b9-45c6-b8af-88e97cafd3a2">Melee</characteristic>
+            <characteristic name="S" typeId="59b1-319e-ec13-d466">+1</characteristic>
+            <characteristic name="AP" typeId="75aa-a838-b675-6484">-4</characteristic>
+            <characteristic name="D" typeId="ae8a-3137-d65b-4ca7">2</characteristic>
+            <characteristic name="Abilities" typeId="837d-5e63-aeb7-1410">Each time an attack is made with this weapon, invulnerable saving throws cannot be made against that attack.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink id="cfcd-7432-648e-defa" name="Relic" hidden="false" targetId="e10e-b44e-7eda-41d8" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+        <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+        <cost name="pts" typeId="points" value="0.0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry id="b0fc-38c0-c987-3c8f" name="The Last Crest of Jaluk" hidden="false" collective="false" import="true" type="upgrade">
+      <modifiers>
+        <modifier type="set" field="hidden" value="true">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="ab1d-b776-4ae7-b164" type="notInstanceOf"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="231a-0089-9fb7-5680" type="equalTo"/>
+                <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="41c3-fbbd-bdb6-85c0" type="equalTo"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" field="hidden" value="true">
+          <conditions>
+            <condition field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="33ef-c007-a341-2bd9" type="notEqualTo"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile id="775c-c2c9-9bfb-ad06" name="The Last Crest of Jaluk" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+          <characteristics>
+            <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Once per battle, before making a saving throw for the bearer it can activate this Relic.  If it does so, then until the end of the phase, the bearer has a 3+ invulnerable save.
+
+Each time teh beaer would lose a wound as the result of a mortal wound, roll one D6: on a 4+, that wound is not lost.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -3835,6 +4084,8 @@ If the result is greater than the Leadership characteristic of that enemy unit, 
         <entryLink id="1fa2-d662-4c61-b8d7" name="Ymma&apos;s Shield" hidden="false" collective="false" import="true" targetId="e9f0-cf85-4a37-0a6f" type="selectionEntry"/>
         <entryLink id="6bf3-aec4-4906-1bf5" name="Flayre" hidden="false" collective="false" import="true" targetId="245f-42e1-3c26-94ef" type="selectionEntry"/>
         <entryLink id="ce0f-60a2-bf05-b474" name="Wayfarer&apos;s Grace" hidden="false" collective="false" import="true" targetId="0f6b-22d0-dc79-16bc" type="selectionEntry"/>
+        <entryLink id="b24a-4107-1277-d1f7" name="The Just Blade" hidden="false" collective="false" import="true" targetId="254e-d3bd-2a57-f2b9" type="selectionEntry"/>
+        <entryLink id="718b-0454-4f56-7a40" name="The Last Crest of Jaluk" hidden="false" collective="false" import="true" targetId="b0fc-38c0-c987-3c8f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="3026-f89f-819c-d23b" name="Ancestral Relics (Bequest)" hidden="true" collective="false" import="true">
@@ -3843,6 +4094,150 @@ If the result is greater than the Leadership characteristic of that enemy unit, 
         <entryLink id="29b8-9d4b-c2c2-4915" name="The Grey Crest" hidden="false" collective="false" import="true" targetId="63b0-985a-5ab7-17a3" type="selectionEntry"/>
         <entryLink id="4277-320a-a71d-6770" name="The Hearthfist" hidden="false" collective="false" import="true" targetId="de0c-9299-c3ce-c4e3" type="selectionEntry"/>
         <entryLink id="c6bd-0e5c-e96c-41e7" name="Warpestryk" hidden="false" collective="false" import="true" targetId="be03-6bec-4e6d-94d5" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="78c4-903c-a811-2703" name="Established League Customs (Second Pick)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="23d7-bc4f-5581-3669" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="51b5-8639-d89b-9015" type="min"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="e0a8-d126-906e-07a9" name="War Songs" hidden="false" collective="false" import="true" targetId="0648-8c85-a315-c45e" type="selectionEntry"/>
+        <entryLink id="b86d-5bce-1adf-e648" name="Martial Cloneskeins" hidden="false" collective="false" import="true" targetId="5b5a-9a88-46b0-232d" type="selectionEntry"/>
+        <entryLink id="c998-b645-d284-b907" name="Stoic" hidden="false" collective="false" import="true" targetId="88b4-00ba-c416-2ac9" type="selectionEntry"/>
+        <entryLink id="4ef9-4653-8c4e-dc10" name="Honour in Toil" hidden="false" collective="false" import="true" targetId="07fd-9e4d-3e9a-8f01" type="selectionEntry"/>
+        <entryLink id="d274-6122-a1b0-07fd" name="Refined Power Cores" hidden="false" collective="false" import="true" targetId="230b-98e8-e80f-5564" type="selectionEntry"/>
+        <entryLink id="c7e6-6090-2a6b-282d" name="Warrior Pride" hidden="false" collective="false" import="true" targetId="fb3a-d08d-ce63-bb5e" type="selectionEntry"/>
+        <entryLink id="b90f-b607-49ce-b984" name="Weaponsmiths" hidden="false" collective="false" import="true" targetId="d556-7d38-045b-8c06" type="selectionEntry"/>
+        <entryLink id="284d-bc8b-83cb-4caa" name="Void Hardened" hidden="false" collective="false" import="true" targetId="1469-ebe2-b4c3-04ee" type="selectionEntry"/>
+        <entryLink id="2699-7f44-6da4-d845" name="Superior Beam Capacitors" hidden="false" collective="false" import="true" targetId="f8a8-8c59-c3b7-159f" type="selectionEntry"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="fba1-5831-a2ff-5db4" name="Established League Customs (Ancestral Judgement)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4b49-ef53-f1a8-2d0a" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dc8b-ebfa-7ba7-f972" type="min"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="fc1e-44c0-8cf6-bb48" name="Quick to Judge" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="10e2-8001-879a-b4fe" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5db9-e5db-c357-3862" name="Quick to Judge" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time an enemy unit targets a unit with this custom with a shooting or melee attack, after the attacking unit has resolved all of its attacks, if the unit with this custom suffered one or more casualties as the result of those attacks but was not destroyed, roll one D6 and add 1 to the result if the unit being attacked is now below Half-strength.  On a 4+, the attacking unit gains 1 Judgement token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f5bb-d0f4-2277-59ad" name="Vengeful" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="95ca-5f4f-2b6d-5965" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a942-1a74-a4c7-3ae7" name="Vengeful" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a unit with this custom is destroyed by an enemy unit, that enemy unit gains 2 Judgement tokens instead of 1.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="98cf-75d0-a391-aa82" name="Unwavering Discipline" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="82ae-90d8-cca7-acbd" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="098f-2e42-97a1-8888" name="Unwavering Discipline" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a model (Excluding a COG model) with this custom makes an attack against a target that has 1 or more Judgement tokens, you can ignore any or all hit roll, Weapon Skill and Ballistic Skill modifiers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="6698-1429-c687-f98b" name="Close Quarters Prioritisation" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="01a0-3a17-359f-5b33" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b88b-7257-8902-657a" name="Close Quarters Prioritisation" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a unit with this custome declares a charge, if it only declares a charge against one target, and if that target has 1 or more Judgement tokens, add 2 to the charge roll</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="72fa-5790-0857-eb89" name="Brutal Efficiency" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="fad9-b4b2-4a02-9299" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a7c8-bd5e-b20a-965f" name="Brutal Efficiency" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a model with this custom (excluding a COG model) makes a melee attack against a target that has 1 or more Judgement tokens, an unmodified hit roll of 6 scores 1 additional hit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="384e-f16b-982f-b5d3" name="Taking it Personally" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="62d5-5bfd-eeeb-ea1b" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="630d-7303-5422-4657" name="Taking it Personally" hidden="false" typeId="72c5eafc-75bf-4ed9-b425-78009f1efe82" typeName="Abilities">
+              <characteristics>
+                <characteristic name="Description" typeId="21befb24-fc85-4f52-a745-64b2e48f8228">Each time a unit with this custom is selected to shoot or fight, if all the models in that unit make attacks target the same enemy unit, after resolving those attacks, if that enemy unit suffered damage as the result of those attacks but was not destroyed, roll one D6 and add 1 to the result if the unit being attacked is now below Half-strength.  On a 5+ , that enemy unit gains 1 Judgement token.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name=" PL" typeId="e356-c769-5920-6e14" value="0.0"/>
+            <cost name="CP" typeId="2d3b-b544-ad49-fb75" value="0.0"/>
+            <cost name="pts" typeId="points" value="0.0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup id="3ad8-2c95-358f-1baa" name="Established League Customs (First Pick)" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9b20-56e8-5c16-3f01" type="max"/>
+        <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8b85-b87a-e2cc-0990" type="min"/>
+      </constraints>
+      <entryLinks>
+        <entryLink id="87ee-2bdc-7925-de3a" name="War Songs" hidden="false" collective="false" import="true" targetId="0648-8c85-a315-c45e" type="selectionEntry"/>
+        <entryLink id="23a9-5b63-bb5f-1f35" name="Martial Cloneskeins" hidden="false" collective="false" import="true" targetId="5b5a-9a88-46b0-232d" type="selectionEntry"/>
+        <entryLink id="6467-cbee-fd72-5f98" name="Stoic" hidden="false" collective="false" import="true" targetId="88b4-00ba-c416-2ac9" type="selectionEntry"/>
+        <entryLink id="2465-8900-1a4e-11e3" name="Honour in Toil" hidden="false" collective="false" import="true" targetId="07fd-9e4d-3e9a-8f01" type="selectionEntry"/>
+        <entryLink id="5397-9ad4-3737-30d3" name="Refined Power Cores" hidden="false" collective="false" import="true" targetId="230b-98e8-e80f-5564" type="selectionEntry"/>
+        <entryLink id="acc8-3cca-58c0-07ba" name="Warrior Pride" hidden="false" collective="false" import="true" targetId="fb3a-d08d-ce63-bb5e" type="selectionEntry"/>
+        <entryLink id="017f-91a4-9c6a-196b" name="Weaponsmiths" hidden="false" collective="false" import="true" targetId="d556-7d38-045b-8c06" type="selectionEntry"/>
+        <entryLink id="b0a5-05d2-4c0b-cd0a" name="Void Hardened" hidden="false" collective="false" import="true" targetId="1469-ebe2-b4c3-04ee" type="selectionEntry"/>
+        <entryLink id="3872-44aa-4871-1ebc" name="Superior Beam Capacitors" hidden="false" collective="false" import="true" targetId="f8a8-8c59-c3b7-159f" type="selectionEntry"/>
       </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
